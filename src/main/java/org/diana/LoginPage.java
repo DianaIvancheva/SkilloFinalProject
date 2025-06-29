@@ -20,19 +20,19 @@ public class LoginPage extends BasePage {
     private WebElement titleLoginForm;
 
     @FindBy(id = "defaultLoginFormUsername")
-    private WebElement usernameOrEmailInputLoginForm;
+    private WebElement usernameOrEmailInput;
 
     @FindBy(id = "defaultLoginFormPassword")
-    private WebElement passwordInputLoginForm;
+    private WebElement passwordInput;
 
     @FindBy(xpath = "//input[contains(@formcontrolname, \"rememberMe\")]")
-    private WebElement rememberMeCheckboxLoginForm;
+    private WebElement rememberMeCheckbox;
 
     @FindBy(id = "sign-in-button")
-    private WebElement signInBtnLoginForm;
+    private WebElement signInBtn;
 
     @FindBy(xpath = "//a[contains(@href, \"/users/register\")]")
-    private WebElement registerLinkLoginForm;
+    private WebElement registerLink;
 
     //when login is unsuccessful
     @FindBy(xpath = "//div[contains(@aria-label, \"Wrong username or password!\")]")
@@ -50,84 +50,85 @@ public class LoginPage extends BasePage {
     }
 
     //USER ACTIONS
-    public void provideUsernameLoginForm(String txt) {
-        typeTextIn(usernameOrEmailInputLoginForm, txt);
+    public void provideUsername(String txt) {
+        typeTextIn(usernameOrEmailInput, txt);
     }
 
-    public void provideValidUsernameLoginForm() {
-        provideUsernameLoginForm(VALID_USERNAME);
+    public void provideValidUsername() {
+        provideUsername(VALID_USERNAME);
     }
 
-    public void providePasswordLoginForm(String txt) {
-        typeTextIn(passwordInputLoginForm, txt);
+    public void providePassword(String txt) {
+        typeTextIn(passwordInput, txt);
     }
 
-    public void provideValidPasswordLoginForm() {
-        providePasswordLoginForm(VALID_PASS);
+    public void provideValidPassword() {
+        providePassword(VALID_PASS);
     }
 
-    public void provideInvalidPasswordLoginForm() {
-        providePasswordLoginForm(INVALID_PASS);
+    public void provideInvalidPassword() {
+        providePassword(INVALID_PASS);
     }
 
-    public void clickOnRememberMeCheckboxLoginForm() {
-        clickOn(rememberMeCheckboxLoginForm);
+    public void clickOnRememberMeCheckbox() {
+        clickOn(rememberMeCheckbox);
     }
 
-    public void clickOnSignInBtnLoginForm() {
-        clickOn(signInBtnLoginForm);
+    public void clickOnSignInBtn() {
+        clickOn(signInBtn);
     }
 
-    public void clickOnRegisterLinkLoginForm() {
-        clickOn(registerLinkLoginForm);
+    public void clickOnRegisterLink() {
+        clickOn(registerLink);
     }
 
     public void loginAsValidUser() {
-        provideValidUsernameLoginForm();
-        provideValidPasswordLoginForm();
-        clickOnSignInBtnLoginForm();
+        //navigateToLoginPage();
+        provideValidUsername();
+        provideValidPassword();
+        clickOnSignInBtn();
 
     }
     //SUPPORT METHODS
-    public String getTitleLoginPage() {
+    public String getTitle() {
         return getElementText(titleLoginForm);
     }
 
-    public String getUsernameOrEmailInputPlaceholderLoginForm() {
-        return getElementPlaceholderValue(usernameOrEmailInputLoginForm);
+    public String getUsernameOrEmailInputPlaceholder() {
+        return getElementPlaceholderValue(usernameOrEmailInput);
     }
 
-    public String getPasswordInputPlaceholderLoginForm() {
-        return getElementPlaceholderValue(passwordInputLoginForm);
+    public String getPasswordInputPlaceholder() {
+        return getElementPlaceholderValue(passwordInput);
     }
 
-    public String getSignInBtnTextLoginForm() {
-        return getElementText(signInBtnLoginForm);
+    public String getSignInBtnText() {
+        return getElementText(signInBtn);
     }
 
     //BOOLEANS
-    public boolean isTitleLoginFormShown() {
+    public boolean isTitleShown() {
         return isElementPresented(titleLoginForm);
     }
 
-    public boolean isUsernameOrEmailInputLoginFormShown() {
-        return isElementPresented(usernameOrEmailInputLoginForm);
+    public boolean isUsernameOrEmailInputShown() {
+        return isElementPresented(usernameOrEmailInput);
     }
 
-    public boolean isPasswordInputLoginFormShown() {
-        return isElementPresented(passwordInputLoginForm);
+    public boolean isPasswordInputShown() {
+        return isElementPresented(passwordInput);
     }
 
-    public boolean isRememberMeCheckboxLoginFormShown() {
-        return isElementPresented(rememberMeCheckboxLoginForm);
+    public boolean isRememberMeCheckboxShown() {
+        return isElementPresented(rememberMeCheckbox);
     }
 
-    public boolean isSignInBtnLoginFormShown() {
-        return isElementPresented(signInBtnLoginForm);
+    public boolean isSignInBtnShown() {
+        return isElementPresented(signInBtn);
     }
 
-    public boolean isRegisterLinkLoginFormShown() {
-        return isElementPresented(registerLinkLoginForm);
+    public boolean isRegisterLinkShown() {
+        return isElementPresented(registerLink);
     }
 
     public boolean isUnsuccessfulToastMsgShown() {

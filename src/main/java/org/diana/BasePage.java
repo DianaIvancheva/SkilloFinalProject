@@ -14,8 +14,8 @@ public class BasePage {
 
     public static final String BASE_URL = "http://training.skillo-bg.com:4300";
 
-    private WebDriver driver;
-    private Logger log;
+    protected WebDriver driver;
+    protected Logger log;
     protected WebDriverWait wait;
 
     public BasePage(WebDriver driver, Logger log) {
@@ -27,6 +27,7 @@ public class BasePage {
     public void navigateTo(String pageURLSUFIX) {
         String url = BASE_URL + pageURLSUFIX;
         driver.get(url);
+
         log.info("The user has navigated to: " + url);
     }
 
@@ -118,15 +119,6 @@ public class BasePage {
         }
     }
 
-//    private String locatorInfo(WebElement elm ){
-//        String[] rawWebElmInfo = elm.toString().split("->");
-//        String[] webElmInfo = rawWebElmInfo[1].split(":");
-//        String locatorStrategy = webElmInfo[0];
-//        String locatorExpression = webElmInfo[1];
-//        String info = "LOCATOR STRATEGY BY : "+ locatorStrategy.toUpperCase() + " WITH LOCATOR EXPRESSION"+ locatorExpression;
-//        return info;
-//    }
-
     //waits
     public WebElement waitForVisibility(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
@@ -135,5 +127,4 @@ public class BasePage {
     public WebElement waitForClickability(WebElement element) {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-
 }

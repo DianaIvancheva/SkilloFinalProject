@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NavBar extends BasePage{
 
@@ -14,23 +13,23 @@ public class NavBar extends BasePage{
     private WebElement homeIcon;
 
     @FindBy(id = "nav-link-home")
-    private WebElement homeLinkNavBar;
+    private WebElement homeLink;
 
     //when logged out
     @FindBy(id = "nav-link-login")
-    private WebElement loginLinkNavBar;
+    private WebElement loginLink;
 
     @FindBy(id = "nav-link-profile")
-    private WebElement profileLinkNavBar;
+    private WebElement profileLink;
 
     @FindBy(id = "nav-link-new-post")
-    private WebElement newPostLinkNavBar;
+    private WebElement newPostLink;
 
     @FindBy(id = "search-bar")
-    private WebElement searchNavBar;
+    private WebElement search;
 
     @FindBy(xpath = "//a/i[contains(@class, \"fas fa-sign-out-alt fa-lg\")]")
-    private WebElement exitBtnNavBar;
+    private WebElement exitBtn;
 
     public NavBar(WebDriver driver, Logger log) {
         super(driver, log);
@@ -38,32 +37,32 @@ public class NavBar extends BasePage{
     }
 
     //USER ACTIONS
-    public void clickOnHomeIconNavBar() {
+    public void clickOnHomeIcon() {
         clickOn(homeIcon);
     }
 
-    public void clickOnHomeLinkNavBar() {
-        clickOn(homeLinkNavBar);
+    public void clickOnHomeLink() {
+        clickOn(homeLink);
     }
 
-    public void clickOnLoginLinkNavBar() {
-        clickOn(loginLinkNavBar);
+    public void clickOnLoginLink() {
+        clickOn(loginLink);
     }
 
-    public void clickOnProfileLinkNavBar() {
-        clickOn(profileLinkNavBar);
+    public void clickOnProfileLink() {
+        clickOn(profileLink);
     }
 
-    public void clickOnNewPostLinkNavBar() {
-        clickOn(newPostLinkNavBar);
+    public void clickOnNewPostLink() {
+        clickOn(newPostLink);
     }
 
-    public void typeTextInSearchNavBar(String txt) {
-        typeTextIn(searchNavBar, txt);
+    public void typeTextInSearch(String txt) {
+        typeTextIn(search, txt);
     }
 
-    public void clickOnLogoutBtnNavBar() {
-        clickOn(exitBtnNavBar);
+    public void clickOnLogoutBtn() {
+        clickOn(exitBtn);
     }
 
     //BOOLEANS
@@ -71,27 +70,27 @@ public class NavBar extends BasePage{
         return isElementPresented(homeIcon);
     }
 
-    public boolean isHomeLinkNavBarShown() {
-        return isElementPresented(homeLinkNavBar);
+    public boolean isHomeLinkShown() {
+        return isElementPresented(homeLink);
     }
 
-    public boolean isLoginLinkNavBarShown() {
-        return isElementPresented(loginLinkNavBar);
+    public boolean isLoginLinkShown() {
+        return isElementPresented(loginLink);
     }
 
-    public boolean isProfileLinkNavBarShown() {
-        return isElementPresented(profileLinkNavBar);
+    public boolean isProfileLinkShown() {
+        return isElementPresented(profileLink);
     }
 
-    public boolean isNewPostLinkNavBarShown() {
-        return isElementPresented(newPostLinkNavBar);
+    public boolean isNewPostLinkShown() {
+        return isElementPresented(newPostLink);
     }
 
-    public boolean isSearchNavBarShown() {
-        return isElementPresented(searchNavBar);
+    public boolean isSearchShown() {
+        return isElementPresented(search);
     }
 
-    public boolean isExitBtnNavBarShown() {
-        return isElementPresented(exitBtnNavBar);
+    public boolean isExitBtnShown() {
+        return isElementPresented(exitBtn);
     }
 }

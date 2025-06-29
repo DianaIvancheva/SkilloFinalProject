@@ -57,10 +57,7 @@ public class BrowserDriverFactory {
         chromeOptions.addArguments("disable-popup-blocking");
         chromeOptions.addArguments("--force-device-scale-factor=1");
         chromeOptions.addArguments("--ignore-certificate-errors",
-                "--allow-running-insecure-content",
-                "--allow-insecure-localhost",
-                "--no-sandbox",
-                "--disable-gpu");
+                "--allow-running-insecure-content");
         chromeOptions.addArguments("--unsafely-treat-insecure-origin-as-secure=http://training.skillo-bg.com:4300/");
         chromeOptions.setAcceptInsecureCerts(true);
 

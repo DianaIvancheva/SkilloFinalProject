@@ -23,25 +23,25 @@ public class RegistrationPage extends BasePage {
     private WebElement titleRegForm;
 
     @FindBy(xpath = "//input[contains(@name, \"username\")]")
-    private WebElement usernameInputRegForm;
+    private WebElement usernameInput;
 
     @FindBy(xpath = "//input[contains(@type, \"email\")]")
-    private WebElement emailInputRegForm;
+    private WebElement emailInput;
 
     @FindBy(xpath = "//input[contains(@formcontrolname, \"birthDate\")]")
-    private WebElement birthDateInputRegForm;
+    private WebElement birthDateInput;
 
     @FindBy(id = "defaultRegisterFormPassword")
-    private WebElement passwordInputRegForm;
+    private WebElement passwordInput;
 
     @FindBy(id = "defaultRegisterPhonePassword")
-    private WebElement confirmPasswordInputRegForm;
+    private WebElement confirmPasswordInput;
 
     @FindBy(xpath = "//textarea[contains(@formcontrolname, \"publicInfo\")]")
-    private WebElement publicInfoTextAreaRegForm;
+    private WebElement publicInfoTextArea;
 
     @FindBy(id = "sign-in-button")
-    private WebElement signUpBtnRegForm;
+    private WebElement signUpBtn;
 
     //CONSTRUCTOR
     public RegistrationPage(WebDriver driver, Logger log) {
@@ -50,90 +50,90 @@ public class RegistrationPage extends BasePage {
     }
 
     //NAVIGATION
-    public void navigateToRegPage() {
+    public void navigateTo() {
         navigateTo(REGISTRATION_PAGE_SUFIX);
     }
 
     //USER ACTIONS
-    public void provideUsernameRegForm(String txt) {
-        typeTextIn(usernameInputRegForm, txt);
+    public void provideUsername(String txt) {
+        typeTextIn(usernameInput, txt);
     }
 
-    public void provideValidUsernameRegForm() {
-        provideUsernameRegForm(generateRandomValidUsername());
+    public void provideValidUsername() {
+        provideUsername(generateRandomValidUsername());
     }
 
-    public void provideEmailRegForm(String txt) {
-        typeTextIn(emailInputRegForm, txt);
+    public void provideEmail(String txt) {
+        typeTextIn(emailInput, txt);
     }
 
-    public void provideValidEmailRegForm() {
-        provideEmailRegForm(generateRandomValidEmail());
+    public void provideValidEmail() {
+        provideEmail(generateRandomValidEmail());
     }
 
-    public void provideBirthDateRegForm(String txt) {
-        typeTextIn(birthDateInputRegForm, txt);
+    public void provideBirthDate(String txt) {
+        typeTextIn(birthDateInput, txt);
     }
 
-    public void provideValidBirthDateRegForm() {
-        provideBirthDateRegForm(VALID_BIRTH_DATE);
+    public void provideValidBirthDate() {
+        provideBirthDate(VALID_BIRTH_DATE);
     }
 
-    public void providePasswordRegForm(String txt) {
-        typeTextIn(passwordInputRegForm, txt);
+    public void providePassword(String txt) {
+        typeTextIn(passwordInput, txt);
     }
 
-    public void provideValidPasswordRegForm() {
-        providePasswordRegForm(VALID_PASSWORD);
+    public void provideValidPassword() {
+        providePassword(VALID_PASSWORD);
     }
 
-    public void provideConfirmPasswordRegForm(String txt) {
-        typeTextIn(confirmPasswordInputRegForm, txt);
+    public void provideConfirmPassword(String txt) {
+        typeTextIn(confirmPasswordInput, txt);
     }
 
-    public void provideValidConfirmPasswordRegForm() {
-        provideConfirmPasswordRegForm(VALID_PASSWORD);
+    public void provideValidConfirmPassword() {
+        provideConfirmPassword(VALID_PASSWORD);
     }
 
-    public void providePublicInfoRegPage(String txt) {
-        typeTextIn(publicInfoTextAreaRegForm, txt);
+    public void providePublicInfo(String txt) {
+        typeTextIn(publicInfoTextArea, txt);
     }
 
-    public void provideValidPublicInfoRegPage() {
-        providePublicInfoRegPage(VALID_PUBLIC_INFO);
+    public void provideValidPublicInfo() {
+        providePublicInfo(VALID_PUBLIC_INFO);
     }
 
-    public void clickOnSignUpBtnRegForm() {
-        clickOn(signUpBtnRegForm);
+    public void clickOnSignUpBtn() {
+        clickOn(signUpBtn);
     }
 
     //SUPPORT METHODS
-    public String getTitleRegPage() {
+    public String getTitle() {
         return getElementText(titleRegForm);
     }
 
     public String getUsernameInputPlaceholder() {
-        return getElementPlaceholderValue(usernameInputRegForm);
+        return getElementPlaceholderValue(usernameInput);
     }
 
     public String getEmailInputPlaceholder() {
-        return getElementPlaceholderValue(emailInputRegForm);
+        return getElementPlaceholderValue(emailInput);
     }
 
     public String getPasswordInputPlaceholder() {
-        return getElementPlaceholderValue(passwordInputRegForm);
+        return getElementPlaceholderValue(passwordInput);
     }
 
     public String getConfirmPasswordInputPlaceholder() {
-        return getElementPlaceholderValue(confirmPasswordInputRegForm);
+        return getElementPlaceholderValue(confirmPasswordInput);
     }
 
     public String getPublicInfoPlaceholder() {
-        return getElementPlaceholderValue(publicInfoTextAreaRegForm);
+        return getElementPlaceholderValue(publicInfoTextArea);
     }
 
     public String getSignUpBtnText() {
-        return getElementText(signUpBtnRegForm);
+        return getElementText(signUpBtn);
     }
 
     public String getCurrentTime() {
@@ -154,35 +154,40 @@ public class RegistrationPage extends BasePage {
     }
 
     //BOOLEANS
-    public boolean isTitleRegPageShown() {
+    public boolean isTitleShown() {
         return isElementPresented(titleRegForm);
     }
 
-    public boolean isUsernameInputRegFormShown() {
-        return isElementPresented(usernameInputRegForm);
+    public boolean isUsernameInputShown() {
+        return isElementPresented(usernameInput);
     }
 
-    public boolean isEmailInputRegFormShown() {
-        return isElementPresented(emailInputRegForm);
+    public boolean isEmailInputShown() {
+        return isElementPresented(emailInput);
     }
 
-    public boolean isBirthDateInputRegFormShown() {
-        return isElementPresented(birthDateInputRegForm);
+    public boolean isBirthDateInputShown() {
+        return isElementPresented(birthDateInput);
     }
 
-    public boolean isPasswordInputRegFormShown() {
-        return isElementPresented(passwordInputRegForm);
+    public boolean isPasswordInputShown() {
+        return isElementPresented(passwordInput);
     }
 
-    public boolean isConfirmPasswordInputRegFormShown() {
-        return isElementPresented(confirmPasswordInputRegForm);
+    public boolean isConfirmPasswordInputShown() {
+        return isElementPresented(confirmPasswordInput);
     }
 
-    public boolean isPublicInfoTextAreaRegFormShown() {
-        return isElementPresented(publicInfoTextAreaRegForm);
+    public boolean isPublicInfoTextAreaShown() {
+        return isElementPresented(publicInfoTextArea);
     }
 
-    public boolean isSignUpBtnRegFormShown() {
-        return isElementPresented(signUpBtnRegForm);
+    public boolean isSignUpBtnShown() {
+        return isElementPresented(signUpBtn);
+    }
+
+    public boolean isSignUpBtnEnabled() {
+        return signUpBtn.isEnabled();
     }
 }
+
