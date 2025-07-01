@@ -12,9 +12,9 @@ public class PostPage extends BasePage {
 
     //CONSTANTS
     public static final String NEW_POST_SUFIX = "/posts/create";
-    private String TEST_PICTURE_PATH = "//src/test/resources/upload/testUpload/jpg";
 
     private String CAPTION = "Test!";
+
     //ELEMENTS
     @FindBy(xpath = "//app-create-post//h3")
     private WebElement titlePostForm;
@@ -47,6 +47,7 @@ public class PostPage extends BasePage {
     public void uploadPicture(File file) {
         isElementPresented(fileUpload);
         fileUpload.sendKeys(file.getAbsolutePath());
+
         log.info("CONFIRMATION # The file was successfully uploaded.");
     }
 

@@ -34,7 +34,6 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//a[contains(@href, \"/users/register\")]")
     private WebElement registerLink;
 
-    //when login is unsuccessful
     @FindBy(xpath = "//div[contains(@aria-label, \"Wrong username or password!\")]")
     private WebElement unsuccessfulLoginToastMsg;
 
@@ -83,12 +82,11 @@ public class LoginPage extends BasePage {
     }
 
     public void loginAsValidUser() {
-        //navigateToLoginPage();
         provideValidUsername();
         provideValidPassword();
         clickOnSignInBtn();
-
     }
+
     //SUPPORT METHODS
     public String getTitle() {
         return getElementText(titleLoginForm);

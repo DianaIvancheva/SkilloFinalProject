@@ -61,6 +61,7 @@ public class BaseTest {
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult testResult) throws IOException {
         takeScreenshotForFailedTests(testResult);
+
         log.info("Quitting driver");
         driver.quit();
     }

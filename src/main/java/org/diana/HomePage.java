@@ -11,7 +11,6 @@ public class HomePage extends BasePage{
     public static final String HOMEPAGE_SUFIX = "/posts/all";
 
     //ELEMENTS
-
     //when logging in
     @FindBy(xpath = "//div[contains(@aria-label, \"Successful login!\")]")
     private WebElement successfulLoginToastMsg;

@@ -73,8 +73,6 @@ public class BasePage {
     }
 
     // VERIFICATIONS BOOLEANS
-
-    // VERIFICATIONS BOOLEANS
     public boolean isElementPresented(WebElement element) {
         boolean isWebElementShown = false;
         String locatorInfo = locatorInfo(element);
