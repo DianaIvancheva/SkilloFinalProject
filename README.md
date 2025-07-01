@@ -12,17 +12,13 @@
 
 [II. QA TEAM MEMBERS](#ii-qa-team-members)
 
-[III. DELIVERABLES](#iii-deliverables)
-
-[IV. USEFUL LINKS](#iv-useful-links)
-
-[V. HOW TO RUN AUTOMATIONS](#v-how-to-run-automations)
+[III. HOW TO RUN AUTOMATIONS](#v-how-to-run-automations)
 
 
 
 ## I. INTRODUCTION
 
-__I-skillo__ is a web application that allows you to connect and communicate with other people. It enables you to:
+__I-skillo__ (http://training.skillo-bg.com:4300/posts/all) is a web application that allows you to connect and communicate with other people. It enables you to:
 
 - connect with other Iskilo platform user by managing connection requests;
 - manage your profile information;
@@ -33,23 +29,10 @@ __I-skillo__ is a web application that allows you to connect and communicate wit
 ## II. QA TEAM MEMBERS
 
 ### QA Team:
-Skillo Best Student<br/>
+Diana Ivancheva <br/>
 Nikolay Nikolov - supervision
 
-## III. DELIVERABLES
-1. [Master Test Plan v3.0]( )
-2. Test Cases - [CloudBaseStorage at GoogleDrive]( add link here)
-3. [UI Automation With Selenium And Java]( )
-4. [UI Summary Report]( )
-
-## IV. USEFUL LINKS
-1. DEV Project
-2. Bug Tracking System
-3. Full QA Documentation
-4. Manual Test Runs
-5. Automation Test Runs
-
-## V. HOW TO RUN AUTOMATIONS
+## III. HOW TO RUN AUTOMATIONS
 
 ### __1. Pre-requisites for running automations__
 
