@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/FP/V1">
+        <classes>
+            <class name="org.diana.LoginFunctionalityTests">
+                <methods>
+                    <include name="verifyLoginPageLayoutIsCorrect"/>
+                    <include name="verifyUserCanLoginWithValidCredentials"/>
+                    <include name="verifyUserCannotLoginWithInvalidPassword"/>
+                </methods>
+            </class>
+            <class name="org.diana.PostsTest">
+                <methods>
+                    <include name="verifyUserCanCreateAPost"/>
+                </methods>
+            </class>
+            <class name="org.diana.RegistrationTests">
+                <methods>
+                    <include name="verifyAllElementsArePresented"/>
+                    <include name="verifyUserCanRegisterWithValidCredentials"/>
+                    <include name="verifyUserCannotRegisterWithInvalidEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
