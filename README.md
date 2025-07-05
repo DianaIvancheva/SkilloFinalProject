@@ -1,6 +1,3 @@
-<img align="right" src="skilloLogo.png" alt="Skilo Academy Logo" />
-
-
 <div align="center">
 
 # Test automation framework
